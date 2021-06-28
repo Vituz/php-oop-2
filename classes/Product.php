@@ -28,6 +28,11 @@ class Product
     }
 }
 
-class Tech extends Product
+class Pc extends Product
 {
+    public $ram;
+    public $hardDisk;
+    public $monitor;
+    public $graphicCard;
+    public $motherboard;
 }
