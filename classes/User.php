@@ -1,5 +1,6 @@
 <?php
 
+include __DIR__ . '/CreditCard.php';
 class User
 {
     public $name;
@@ -7,6 +8,7 @@ class User
     private $eta;
     public $mail;
     private $passw;
+    private $creditCard;
 
     function __construct(string $name, string $lastname, int $eta, string $mail, string $passw)
     {
@@ -21,11 +23,33 @@ class User
     {
         $this->passw = $passw;
     }
+
+    public function addCreditCard($card)
+    {
+        $this->creditCard = $card;
+    }
 }
 
 
 class UserPremium extends User
 {
     protected $discount;
-    protected $offer;
+
+    function __construct(string $name, string $lastname, int $eta, string $mail, string $passw, int $discount)
+    {
+
+        parent::__construct($name, $lastname, $eta, $mail, $passw);
+        $this->discount = $discount;
+    }
 }
+
+
+$credit = new CreditCard('Vito', 'Battaglia', '12/24', 33345678, 345);
+
+$vito = new User('Vito', 'Battaglia', 32, 'prova@example.it', 'prova');
+
+var_dump($vito);
+var_dump($credit);
+
+$vito->addCreditCard($credit);
+var_dump($vito);
