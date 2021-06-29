@@ -50,6 +50,8 @@ header h1 {
     background-color: #36B3E8;
     margin: 1rem;
     color: white;
+    position: relative;
+    box-shadow: 0.5rem 0.5rem 2rem #36b3e8;
 }
 
 .card img {
@@ -61,11 +63,15 @@ header h1 {
     margin: 1rem;
 }
 
+.card_footer {
+    width: 100%;
+    border: 1px solid white;
+}
+
 .card_footer>h3 {
     font-size: 0.8rem;
     color: black;
     margin: 1rem;
-
 }
 
 /* /MAIN */

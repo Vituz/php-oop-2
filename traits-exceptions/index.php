@@ -45,11 +45,19 @@ include __DIR__ . '/database/db.php';
     <main>
         <div class="container">
 
+            <!-- Game List -->
             <?php foreach ($gameDb as $game) : ?>
 
+                <!-- Game Card -->
                 <div class="card">
+
+                    <!-- Image -->
                     <img src="<?= $game->getImg() ?>" alt="<?= $game->getName() ?>">
+
+                    <!-- Name -->
                     <h2><?= $game->getName() ?></h2>
+
+                    <!-- Rating -->
                     <h3>Rating:
                         <?php
                         try {
@@ -60,11 +68,15 @@ include __DIR__ . '/database/db.php';
                         ?>
                     </h3>
 
-
+                    <!-- Genre -->
                     <h3>Genre(s): <?= $game->getGenre() ?></h3>
+
+                    <!-- Release Year -->
                     <h3>Release Year: <?= $game->getRelease() ?></h3>
 
                     <div class="card_footer">
+
+                        <!-- Downloaded Times -->
                         <h3>Downloaded Times: <?= $game->downloaded(rand(10, 250)) ?></h3>
                     </div>
                 </div>
