@@ -21,4 +21,21 @@ class Game
         $this->release = $release;
         $this->img = $img;
     }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+    public function getRelease()
+    {
+        return $this->release;
+    }
+    public function getImg()
+    {
+        return $this->img;
+    }
 }

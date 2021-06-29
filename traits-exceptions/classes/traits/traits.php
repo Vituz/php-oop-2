@@ -7,7 +7,7 @@
  */
 trait Rate
 {
-    public $rating;
+    protected $rating;
 
     public function ratingGame($num)
     {
@@ -23,7 +23,7 @@ trait Rate
 
 trait Downloaded
 {
-    public $downloaded;
+    protected $downloaded;
 
     public function downloaded($num)
     {

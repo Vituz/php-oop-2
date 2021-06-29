@@ -27,4 +27,9 @@ class NeoGeo extends Game
     {
         parent::__construct($name, $genre, $release, $img);
     }
+
+    public function getEmulator()
+    {
+        return $this->emulator;
+    }
 }
