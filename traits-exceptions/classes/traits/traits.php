@@ -11,7 +11,7 @@ trait Rate
 
     public function ratingGame($num)
     {
-        if (!is_int($num) && $num > 5 && $num < 1) {
+        if (!is_int($num)) {
 
             throw new Exception('Inserisci un numero da 1 a 5');
         } else {

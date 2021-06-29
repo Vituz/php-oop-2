@@ -50,7 +50,17 @@ include __DIR__ . '/database/db.php';
                 <div class="card">
                     <img src="<?= $game->getImg() ?>" alt="<?= $game->getName() ?>">
                     <h2><?= $game->getName() ?></h2>
-                    <h3>Rating: <?= $game->ratingGame(rand(1, 5)) ?>/5</h3>
+                    <h3>Rating:
+                        <?php
+                        try {
+                            echo $game->ratingGame('prova') . '/5';
+                        } catch (Exception $e) {
+                            echo '<span class="error">' .  $e->getMessage() . '</span>';
+                        }
+                        ?>
+                    </h3>
+
+
                     <h3>Genre(s): <?= $game->getGenre() ?></h3>
                     <h3>Release Year: <?= $game->getRelease() ?></h3>
 
