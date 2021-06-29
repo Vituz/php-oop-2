@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Rating Game
+ * @author Vituz
+ * @copyright Vituz 2021
+ */
+trait Rate
+{
+    public $rating;
+
+    public function ratingGame($num)
+    {
+        if (!is_int($num) && $num > 5 && $num < 1) {
+
+            throw new Exception('Inserisci un numero da 1 a 5');
+        } else {
+
+            return $this->rating = $num;
+        }
+    }
+}
+
+trait Downloaded
+{
+    public $downloaded;
+
+    public function downloaded($num)
+    {
+        return $this->downloaded = $num;
+    }
+}
