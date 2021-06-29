@@ -50,9 +50,13 @@ include __DIR__ . '/database/db.php';
                 <div class="card">
                     <img src="<?= $game->getImg() ?>" alt="<?= $game->getName() ?>">
                     <h2><?= $game->getName() ?></h2>
-                    <h3><?= $game->getGenre() ?></h3>
-                    <h3><?= $game->getRelease() ?></h3>
+                    <h3>Rating: <?= $game->ratingGame(rand(1, 5)) ?>/5</h3>
+                    <h3>Genre(s): <?= $game->getGenre() ?></h3>
+                    <h3>Release Year: <?= $game->getRelease() ?></h3>
 
+                    <div class="card_footer">
+                        <h3>Downloaded Times: <?= $game->downloaded(rand(10, 250)) ?></h3>
+                    </div>
                 </div>
 
             <?php endforeach; ?>

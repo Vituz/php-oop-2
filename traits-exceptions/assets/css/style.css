@@ -40,10 +40,23 @@ header h1 {
     width: 300px;
     background-color: #36B3E8;
     margin: 1rem;
+    color: white;
 }
 
 .card img {
     width: 300px;
+}
+
+.card h2,
+.card>h3 {
+    margin: 1rem;
+}
+
+.card_footer>h3 {
+    font-size: 0.8rem;
+    color: black;
+    margin: 1rem;
+
 }
 
 /* /MAIN */
