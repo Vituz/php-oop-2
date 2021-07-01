@@ -32,6 +32,11 @@ class CreditCard
         $this->date = $date;
     }
 
+    public function getCardNumber()
+    {
+        return $this->cardNumber;
+    }
+
     public function setCardNumber($cardNumber)
     {
         $this->cardNumber = $cardNumber;

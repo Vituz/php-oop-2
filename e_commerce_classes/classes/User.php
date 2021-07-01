@@ -44,12 +44,11 @@ class UserPremium extends User
 }
 
 
-$credit = new CreditCard('Vito', 'Battaglia', '12/24', 33345678, 345);
 
-$vito = new User('Vito', 'Battaglia', 32, 'prova@example.it', 'prova');
 
-var_dump($vito);
-var_dump($credit);
 
-$vito->addCreditCard($credit);
-var_dump($vito);
+// var_dump($vito);
+// var_dump($credit);
+
+// $vito->addCreditCard($credit);
+// var_dump($vito);
